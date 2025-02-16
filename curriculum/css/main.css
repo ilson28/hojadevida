@@ -1,0 +1,242 @@
+:root {
+
+    --header-color: #121417;
+    --text-color: #61758A;
+}
+
+
+
+
+/* GENERALES */
+.course__img,
+.proyect__img,
+.education__img,
+.contact__img {
+    display: block;
+    width: 25px;
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", serif;
+    color: var(--header-color);
+
+    /* animation: aparecer .7s ease-in-out forwards; */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    width: 90%;
+
+}
+
+.small-words {
+    color: var(--text-color);
+    margin-top: 5px;
+}
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    animation: aparecer-right .7s ease-in-out forwards;
+}
+
+.header__img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    width: 115px;
+    /* outline: solid 4px var(--text-color); */
+
+}
+
+h1 {
+    margin: 12px 0 8px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header__text {
+
+    color: var(--text-color);
+    text-wrap: pretty;
+
+}
+
+
+/* ----------MAIN------ */
+
+
+.main__title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+
+}
+
+/* -----ABOUT ME------ */
+
+.aboutme {
+
+    animation: aparecer-right .7s ease-in-out forwards;
+
+}
+
+.aboutme__text {
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+
+/* -----EDUCATION------ */
+
+.education {
+    animation: aparecer-left .7s ease-in-out forwards;
+
+}
+
+.education__content {
+
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.main__subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+
+.education__university {
+    margin-left: auto;
+    text-decoration: none;
+    color: #fc0606
+}
+
+.education__university:hover {
+    color: #900c0c;
+}
+
+
+/*---------- SKILLS--------- */
+.skills {
+    animation: aparecer-left 1s ease-in-out forwards;
+
+}
+
+.skills__container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skills-1,
+.skills-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill {
+    padding: 10px 16px;
+    background-color: #D1D5DB;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color .2s, color .2s;
+}
+
+.skill:hover {
+    background-color: #121417;
+    color: #fff;
+}
+
+
+/*---------- Proyects, contact and Courses--------- */
+
+.proyects {
+    animation: aparecer-left 1s ease-in-out forwards;
+
+}
+
+.proyects__content,
+.courses__content,
+.contacts__content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.proyect,
+.course,
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: background-color .3s, color .3s, padding .4s;
+}
+
+
+.proyect__img--left,
+.course__img--left {
+    margin-left: auto;
+}
+
+:is(.course, .contact, .proyect):hover {
+    background-color: #121417;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+:is(.course, .contact, .proyect):hover :is(.proyect__img--left,
+    .course__img--left,
+    .contact__img, .proyect__img) {
+
+    filter: invert(1);
+
+}
+
+
+
+
+
+/* ANIMATIONS */
+
+@keyframes aparecer-right {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aparecer-left {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
