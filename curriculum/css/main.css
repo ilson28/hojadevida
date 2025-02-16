@@ -34,7 +34,7 @@ body {
     max-width: 1000px;
     margin: 2rem auto;
     width: 90%;
-
+    /* min-width: 360px; */
 }
 
 .small-words {
@@ -122,11 +122,17 @@ h1 {
 .education__university {
     margin-left: auto;
     text-decoration: none;
-    color: #fc0606
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    color: #fc0606;
+    transition: outline .2s, color .2s, font-weight .2s;
 }
 
 .education__university:hover {
+    font-weight: bold;
     color: #900c0c;
+    outline: solid 2px;
 }
 
 
