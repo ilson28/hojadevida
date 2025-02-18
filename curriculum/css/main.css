@@ -191,6 +191,7 @@ h1 {
 .contact {
     display: flex;
     align-items: center;
+    padding: 10px;
     gap: 2rem;
     cursor: pointer;
     border-radius: 6px;
@@ -206,7 +207,7 @@ h1 {
 :is(.course, .contact, .proyect):hover {
     background-color: #121417;
     color: #fff;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 
